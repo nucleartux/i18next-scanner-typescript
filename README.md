@@ -2,6 +2,14 @@
 
 Typescript support for [i18next-scanner](https://github.com/i18next/i18next-scanner/)
 
+
+## Install
+
+```
+yarn add -D i18next-scanner-typescript
+```
+
+
 ## Usage
 
 ```
