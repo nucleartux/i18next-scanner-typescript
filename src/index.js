@@ -5,7 +5,7 @@ var typescript = require("typescript");
 module.exports = function typescriptTransform(options) {
   options = options || {};
   if (!options.extensions) {
-    options.extensions = ["tsx"];
+    options.extensions = [".tsx"];
   }
 
   return function transform(file, enc, done) {
@@ -15,9 +15,12 @@ module.exports = function typescriptTransform(options) {
 
     if (options.extensions.indexOf(extension) !== -1) {
       content = typescript.transpileModule(content, {
+        compilerOptions: {
+          target: 'es2018'
+        },
         fileName: path.basename(file.path)
       }).outputText;
-
+      parser.parseTransFromString(content);
       parser.parseFuncFromString(content);
     }
 

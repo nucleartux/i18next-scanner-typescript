@@ -16,9 +16,12 @@ yarn add -D i18next-scanner-typescript
 var typescriptTransform = require('i18next-scanner-typescript');
 
 module.exports = {
+  trans: {
+    component: "Trans"
+  },
   // your i18next-scanner config
   // ...
-  transform: typescriptTransform({ extensions: ["tsx"] })
+  transform: typescriptTransform({ extensions: [".tsx"] })
 };
 
 ```
