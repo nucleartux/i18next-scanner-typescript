@@ -1,27 +1,27 @@
-var fs = require("fs");
-var path = require("path");
-var typescript = require("typescript");
+const fs = require("fs");
+const path = require("path");
+const typescript = require("typescript");
 
-module.exports = function typescriptTransform(options) {
-  options = options || {};
+module.exports = function typescriptTransform(options = {}) {
   if (!options.extensions) {
-    options.extensions = [".tsx"];
+    options.extensions = [".ts", ".tsx"];
   }
 
   return function transform(file, enc, done) {
-    const extension = path.extname(file.path);
-    const parser = this.parser;
-    let content = fs.readFileSync(file.path, enc);
+    const { base, ext } = path.parse(file.path);
 
-    if (options.extensions.indexOf(extension) !== -1) {
-      content = typescript.transpileModule(content, {
+    if (options.extensions.includes(ext) && !base.includes('.d.ts')) {
+      const content = fs.readFileSync(file.path, enc);
+
+      const { outputText } = typescript.transpileModule(content, {
         compilerOptions: {
-          target: 'es2018'
+          target: 'es2018',
         },
-        fileName: path.basename(file.path)
-      }).outputText;
-      parser.parseTransFromString(content);
-      parser.parseFuncFromString(content);
+        fileName: path.basename(file.path),
+      });
+
+      this.parser.parseTransFromString(outputText);
+      this.parser.parseFuncFromString(outputText);
     }
 
     done();
