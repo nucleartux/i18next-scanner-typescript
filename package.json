@@ -10,8 +10,8 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
-    "@pika/plugin-build-node": "^0.3.11",
-    "@pika/plugin-standard-pkg": "^0.3.11"
+    "@pika/plugin-build-node": "^0.4.0",
+    "@pika/plugin-standard-pkg": "^0.4.0"
   },
   "dependencies": {
     "typescript": "^3.0.0"

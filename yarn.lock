@@ -634,34 +634,34 @@
   resolved "https://registry.yarnpkg.com/@pika/babel-plugin-esm-import-rewrite/-/babel-plugin-esm-import-rewrite-0.3.11.tgz#af24f0fb81bfe28be1f9cce7540befb70312ac6f"
   integrity sha512-rMrYdsCL1E7xX5KN4AxTcEKOyg9ICUHt4xdFmFICnCj23XWn7c1AljJJA/PjaucArS6QsJBRJchKPXK45D2pUg==
 
-"@pika/plugin-build-node@^0.3.11":
-  version "0.3.11"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.3.11.tgz#8a62c9a6a100c605b9eea342b172bcf7a3f544b7"
-  integrity sha512-QNuDA1YgemoP5JwuEDwF5Gv7UZaDMZT089PPXY5UW18RWdGdLGxYsGARAIAsx5+eWpcAKVg9Y4/2hEk2S1O8EA==
+"@pika/plugin-build-node@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-build-node/-/plugin-build-node-0.4.0.tgz#8824ce505fb200bf81d9cb40a316b110bd710f6b"
+  integrity sha512-G6h6h8Y+BObwVG5Mq1X0munTXw7/WwNa0GdXp6CblH2L8nc6tPlB5gfFGzH0ej32W3XDKXuLV+G9xkvZ1g+MHg==
   dependencies:
     "@babel/core" "^7.0.0"
     "@babel/plugin-syntax-dynamic-import" "^7.2.0"
     "@babel/plugin-syntax-import-meta" "^7.2.0"
     "@babel/preset-env" "^7.2.3"
-    "@pika/types" "^0.3.5"
+    "@pika/types" "^0.4.0"
     babel-plugin-dynamic-import-node-babel-7 "^2.0.7"
     builtin-modules "^3.0.0"
     rollup "^1.1.0"
     rollup-plugin-babel "^4.3.0"
 
-"@pika/plugin-standard-pkg@^0.3.11":
-  version "0.3.11"
-  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.3.11.tgz#7dfaa2e48cbc2b052c615b000102fd3b8a25b134"
-  integrity sha512-fYI03EdK8ZxD1PeK5/EhvAtgf8TWutk6xKUFmwQrwx5vtPbez9rjxOwasLuGjkwaRCufe5fOeXNjB1XFV+egzA==
+"@pika/plugin-standard-pkg@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/plugin-standard-pkg/-/plugin-standard-pkg-0.4.0.tgz#565ad288268858015c1108519f467dc54e438992"
+  integrity sha512-VNvvl7r7vPVpnOHNeoeJT2EwIywSA3qeY8GC3oKlBaO1aq8Bd44BtbsvZbRvzrp16kZ7sHUsyI4wAYKgQADBhg==
   dependencies:
-    "@pika/types" "^0.3.5"
+    "@pika/types" "^0.4.0"
     "@types/node" "^10.12.18"
     standard-pkg "^0.4.0"
 
-"@pika/types@^0.3.5":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.3.9.tgz#4356dcfdc115c5371bc0b96a31d12e4e506ceb53"
-  integrity sha512-hzc0IHPvz4sdlaXP4Gzu9x1WF6CUTxyXbiYDLzxJQP9kvp8w4raeL0TB9YVFyayy6bplTaakTIoNrayy0ApBbw==
+"@pika/types@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@pika/types/-/types-0.4.0.tgz#e55f4ddca4d1e6362b7f43ee7afc494c114a7d58"
+  integrity sha512-vgNcz+tvlWtHzLRmuGfpUU8I3tRTfv4YFnhrx8ZXag2kE3kPw/DnC4yMVCx9wgimI1iptyXGDTNYui+kyBGoDg==
 
 "@types/estree@0.0.39":
   version "0.0.39"
