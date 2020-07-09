@@ -2,7 +2,13 @@ const fs = require("fs");
 const path = require("path");
 const typescript = require("typescript");
 
-module.exports = function typescriptTransform(options = {}) {
+module.exports = function typescriptTransform(
+  options = {
+    tsOptions: {
+      target: "es2018",
+    },
+  }
+) {
   if (!options.extensions) {
     options.extensions = [".ts", ".tsx"];
   }
@@ -10,13 +16,11 @@ module.exports = function typescriptTransform(options = {}) {
   return function transform(file, enc, done) {
     const { base, ext } = path.parse(file.path);
 
-    if (options.extensions.includes(ext) && !base.includes('.d.ts')) {
+    if (options.extensions.includes(ext) && !base.includes(".d.ts")) {
       const content = fs.readFileSync(file.path, enc);
 
       const { outputText } = typescript.transpileModule(content, {
-        compilerOptions: {
-          target: 'es2018',
-        },
+        compilerOptions: tsOptions,
         fileName: path.basename(file.path),
       });
 
