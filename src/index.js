@@ -7,12 +7,9 @@ module.exports = function typescriptTransform(
     tsOptions: {
       target: "es2018",
     },
+    extensions = [".ts", ".tsx"]
   }
 ) {
-  if (!options.extensions) {
-    options.extensions = [".ts", ".tsx"];
-  }
-
   return function transform(file, enc, done) {
     const { base, ext } = path.parse(file.path);
 
@@ -20,7 +17,7 @@ module.exports = function typescriptTransform(
       const content = fs.readFileSync(file.path, enc);
 
       const { outputText } = typescript.transpileModule(content, {
-        compilerOptions: tsOptions,
+        compilerOptions: options.tsOptions,
         fileName: path.basename(file.path),
       });
 
