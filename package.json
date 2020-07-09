@@ -1,6 +1,6 @@
 {
   "name": "i18next-scanner-typescript",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "i18next-scanner Typescript transform",
   "repository": {
     "type": "git",
