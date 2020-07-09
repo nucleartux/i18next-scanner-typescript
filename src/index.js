@@ -7,7 +7,7 @@ module.exports = function typescriptTransform(
     tsOptions: {
       target: "es2018",
     },
-    extensions = [".ts", ".tsx"]
+    extensions: [".ts", ".tsx"],
   }
 ) {
   return function transform(file, enc, done) {
