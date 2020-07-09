@@ -6,32 +6,14 @@
     "type": "git",
     "url": "git+ssh://git@github.com/nucleartux/i18next-scanner-typescript.git"
   },
+  "main": "src/index.js",
   "author": "Igor Adrov",
   "license": "MIT",
   "private": false,
-  "devDependencies": {
-    "@pika/plugin-build-node": "^0.4.0",
-    "@pika/plugin-standard-pkg": "^0.4.0"
-  },
   "dependencies": {
     "typescript": "^3.0.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "@pika/pack": {
-    "pipeline": [
-      [
-        "@pika/plugin-standard-pkg",
-        {
-          "exclude": [
-            "__tests__/*"
-          ]
-        }
-      ],
-      [
-        "@pika/plugin-build-node"
-      ]
-    ]
   }
 }
