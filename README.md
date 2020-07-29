@@ -16,12 +16,28 @@ yarn add -D i18next-scanner-typescript
 var typescriptTransform = require('i18next-scanner-typescript');
 
 module.exports = {
-  trans: {
-    component: "Trans"
+  options: {
+    func: {
+      // don't pass ts or tsx here!
+      extensions: ['.js', '.jsx'],
+    },
+    trans: {
+      // don't pass ts or tsx here!
+      extensions: ['.js', '.jsx'],
+    },
   },
   // your i18next-scanner config
   // ...
-  transform: typescriptTransform({ extensions: [".tsx"] })
+  transform: transform: typescriptTransform({
+      // default value for extensions
+      extensions: [".tsx"],
+      // optional ts configuration
+      tsOptions: {
+        target: "es2017",
+      },
+  }),
 };
 
 ```
+
+Double check that you don't have TS extensions in the non-transform configuration
