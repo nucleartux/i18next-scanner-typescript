@@ -28,7 +28,7 @@ module.exports = {
   },
   // your i18next-scanner config
   // ...
-  transform: transform: typescriptTransform({
+  transform: typescriptTransform({
       // default value for extensions
       extensions: [".tsx"],
       // optional ts configuration
