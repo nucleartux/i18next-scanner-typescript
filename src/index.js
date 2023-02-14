@@ -9,6 +9,7 @@ module.exports = function typescriptTransform(
     },
     extensions: [".ts", ".tsx"],
   }
+  transformFn,
 ) {
   return function transform(file, enc, done) {
     const { base, ext } = path.parse(file.path);
@@ -20,6 +21,11 @@ module.exports = function typescriptTransform(
         compilerOptions: options.tsOptions,
         fileName: path.basename(file.path),
       });
+
+      if (typeof transformFn === 'function') {
+        transformFn.call(this, outputText, file, enc, done);
+        return;
+      }
 
       this.parser.parseTransFromString(outputText);
       this.parser.parseFuncFromString(outputText);
