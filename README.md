@@ -37,7 +37,7 @@ module.exports = {
     function customTransform(outputText, file, enc, done) {
       // do something custom with the transpiled `outputText`
       parser.parseTransFromString(outputText);
-      parser.parseFuncFromString(outputText});
+      parser.parseFuncFromString(outputText);
 
       done();
     },
