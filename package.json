@@ -10,8 +10,11 @@
   "author": "Igor Adrov",
   "license": "MIT",
   "private": false,
-  "dependencies": {
+  "devDependencies": {
     "typescript": "^5.3.2"
+  },
+  "peerDependencies": {
+    "typescript": "5.x"
   },
   "publishConfig": {
     "access": "public"
